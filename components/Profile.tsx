@@ -13,8 +13,8 @@ export default function Profile() {
                 <Text style={tailwind('text-white pb-2')}>About Athlete</Text>
                 <Text style={tailwind('text-white font-bold')}>Lionel Messi </Text>
                 <Text style={tailwind('text-white')}>Miami State College</Text>
-                <Ionicons name="person" size={24} color="white"></Ionicons>
-                <Text style={tailwind('text-white')}>+977-95403232634</Text>
+                <Text style={tailwind('text-white')}>
+                    <Ionicons name="call" size={18} color="white" />+977-95403232634</Text>
                 {/* <Avatar avatarStyle={tailwind('content-end')} rounded source ={{
           uri: 'https://s3.amazonaws.com/uifaces/faces/twitter/ladylexy/128.jpg', 
         }} /> */}

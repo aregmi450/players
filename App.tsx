@@ -4,9 +4,10 @@ import { StyleSheet, Text, View } from 'react-native';
 import tailwind from 'tailwind-rn';
 import { Ionicons } from '@expo/vector-icons';
 import {Icon } from 'react-native-elements';
-import Profile from './Profile';
-import Games from './Games';
-import Stats from './Stats';
+import Profile from './components/Profile';
+import Games from './components/Games';
+import Stats from './components/Stats';
+import Academic from './components/Academic';
 
 export default function App() {
   return (
@@ -21,7 +22,11 @@ export default function App() {
       </View>
 
       <Stats />
-      
+      <View style={tailwind('flex-row items-center pl-5')}>
+      <Ionicons name="newspaper" size={24} color="black" />
+      <Text style={tailwind('p-2 text-blue-400 font-bold')}>Athlete Academics</Text>
+      </View>
+      <Academic />
       <StatusBar style="auto" />
     </View>
 
