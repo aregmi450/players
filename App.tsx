@@ -2,44 +2,30 @@ import { StatusBar } from 'expo-status-bar';
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 import tailwind from 'tailwind-rn';
-import { Avatar } from 'react-native-elements';
+import { Ionicons } from '@expo/vector-icons';
+import {Icon } from 'react-native-elements';
+import Profile from './Profile';
+import Games from './Games';
+import Stats from './Stats';
 
 export default function App() {
   return (
     <View style={styles.container}>
+      <Profile/>
 
-      <Text style={tailwind('text-blue-800 font-bold m-5')}>Athelete Profile </Text>
+      <Games/>
 
-      <View style={tailwind('bg-black px-3 py-3 rounded m-2')}>
-        <Text style={tailwind('text-white')}>Lionel Messi </Text>
-        <Text style={tailwind('text-white')}>Miami State College</Text>
-        <Text style={tailwind('text-white')}>+977-95403232634</Text>
-        {/* <Avatar avatarStyle={tailwind('content-end')} rounded source ={{
-          uri: 'https://s3.amazonaws.com/uifaces/faces/twitter/ladylexy/128.jpg', 
-        }} /> */}
+      <View style={tailwind('flex-row items-center pl-5')}>
+        <Ionicons name="person" size={24} color="black" />
+        <Text style={tailwind('p-2 text-blue-400 font-bold')}>Athlete Stats</Text>
       </View>
 
-      <View style={tailwind('bg-red-400 px-3 py-3 rounded m-2 ')}>
-        <Text> 6 Succesful Reports</Text>
-        <Text> 12 Events Played </Text>
-        <Text> 9 Jersey Number </Text>
-      </View>
-
-      <Text>Athlete Stats</Text>
-
-      <View style={styles.three}> 
-        <Text>Height 5'11''</Text>
-        <Text>Weight 170 </Text>
-        <Text>Primary Position</Text>
-        <Text>Secondary Position</Text>
-      </View>
-
-      
-
-
+      <Stats />
       
       <StatusBar style="auto" />
     </View>
+
+ 
   );
 }
 
@@ -61,11 +47,5 @@ const styles = StyleSheet.create({
     alignContent: "center",
     marginBottom:20,
     flex: 1
-  },
-  three: {
-    backgroundColor: "purple",
-    alignContent: "center",
-    marginTop: 15,
-    flex:1
   },
 });
