@@ -8,13 +8,17 @@ import Profile from './components/Profile';
 import Games from './components/Games';
 import Stats from './components/Stats';
 import Academic from './components/Academic';
+import {props} from './components/Games'
 
 export default function App() {
   return (
     <View style={styles.container}>
       <Profile/>
 
-      <Games/>
+      <Games
+      score= {6}
+      statFor='Succesful Reports'
+      />
 
       <View style={tailwind('flex-row items-center pl-5')}>
         <Ionicons name="person" size={24} color="black" />
