@@ -13,7 +13,10 @@ import {props} from './components/Games'
 export default function App() {
   return (
     <View style={styles.container}>
-      <Profile/>
+      <Profile
+      name='Lionel Messi'
+      collegeName='Miami State College'
+      cellno='+977-9846503254'/>
 
       <Games
       score= {6}
