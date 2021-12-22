@@ -34,7 +34,11 @@ export default function App() {
       </View>
       <Academic
       schoolName='Ullens School'
-      gpa={4.5} />
+      actScore={3}
+      satScore={5.5}
+      gpa={4.5} 
+      gradYear={2021}
+      />
       <StatusBar style="auto" />
     </View>
 

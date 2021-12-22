@@ -5,7 +5,10 @@ import tailwind from "tailwind-rn";
 
 type AcademicDetails = {
     schoolName: string,
-    gpa: number
+    gpa: number,
+    actScore: number,
+    satScore: number,
+    gradYear: number
 }
 
 const Academic: FC<AcademicDetails> = (props) => {
@@ -15,8 +18,25 @@ const Academic: FC<AcademicDetails> = (props) => {
             <Text style={tailwind('text-white m-2 ')}>
                 <Ionicons name="school" size={20} color="grey" style={tailwind('p-2')} /> {props.schoolName}
             </Text>
+
+            <Text style={tailwind('flex-row m-2 text-white')}> ACT Score </Text>
             <Text style={tailwind('text-white m-2 ')}>
-                <Ionicons name="document-text" size={20} color="grey"/>{props.gpa}
+                <Ionicons name="document-text" size={20} color="grey"/>{props.actScore}
+            </Text>
+
+            <Text style={tailwind('flex-row m-2 text-white')}> SAT Score </Text>
+            <Text style={tailwind('text-white m-2 ')}>
+                <Ionicons name="document-text" size={20} color="grey" />{props.satScore}
+            </Text>
+
+            <Text style={tailwind('flex-row m-2 text-white')}> GPA </Text>
+            <Text style={tailwind('text-white m-2 ')}>
+                <Ionicons name="document-text" size={20} color="grey" style={tailwind('')} />{props.gpa}
+            </Text>
+
+            <Text style={tailwind('flex-row m-2 text-white')}> Graduation Year </Text>
+            <Text style={tailwind('text-white m-2 ')}>
+                <Ionicons name="school" size={20} color="grey" />{props.gradYear}
             </Text>
 
         

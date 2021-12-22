@@ -22,7 +22,7 @@ const Profile: FC<Info> = (props) => {
                 <Text style={tailwind('text-white font-bold')}>{props.name} </Text>
                 <Text style={tailwind('text-white')}>{props.collegeName}</Text>
                 <Text style={tailwind('text-white')}>
-                    <Ionicons name="call" size={18} color="white" />{props.cellno}</Text>
+                    <Ionicons name="call" size={16} color="red" />{props.cellno}</Text>
                 {/* <Avatar avatarStyle={tailwind('content-end')} rounded source ={{
           uri: 'https://s3.amazonaws.com/uifaces/faces/twitter/ladylexy/128.jpg', 
         }} /> */}
