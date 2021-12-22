@@ -3,12 +3,11 @@ import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 import tailwind from 'tailwind-rn';
 import { Ionicons } from '@expo/vector-icons';
-import {Icon } from 'react-native-elements';
 import Profile from './components/Profile';
 import Games from './components/Games';
 import Stats from './components/Stats';
 import Academic from './components/Academic';
-import {props} from './components/Games'
+
 
 export default function App() {
   return (
@@ -33,7 +32,9 @@ export default function App() {
       <Ionicons name="newspaper" size={24} color="black" />
       <Text style={tailwind('p-2 text-blue-400 font-bold')}>Athlete Academics</Text>
       </View>
-      <Academic />
+      <Academic
+      schoolName='Ullens School'
+      gpa={4.5} />
       <StatusBar style="auto" />
     </View>
 
@@ -43,7 +44,7 @@ export default function App() {
 
 const styles = StyleSheet.create({
   container: {
-    backgroundColor: '#fff',
+    backgroundColor: 'white',
     justifyContent: 'center',
     flex: 1,
     marginTop: 35

@@ -1,17 +1,22 @@
-import React from "react";
+import React, {FC} from "react";
 import {Text, View} from 'react-native';
 import {Ionicons} from "@expo/vector-icons";
 import tailwind from "tailwind-rn";
 
-const Academic = () => {
+type AcademicDetails = {
+    schoolName: string,
+    gpa: number
+}
+
+const Academic: FC<AcademicDetails> = (props) => {
     return (
-        <View style={tailwind('bg-blue-400 px-3 py-3 rounded m-2')}>
-            <Text style={tailwind('flex-row m-2') }> School </Text>
-            <Text style={tailwind('text-black m-2 ')}>
-                <Ionicons name="school" size={20} color="black" style={tailwind('flex-row')} /> J.J Thomas
+        <View style={tailwind('bg-black px-3 py-3 rounded m-2')}>
+            <Text style={tailwind('flex-row m-2 text-white') }> High School </Text>
+            <Text style={tailwind('text-white m-2 ')}>
+                <Ionicons name="school" size={20} color="grey" style={tailwind('p-2')} /> {props.schoolName}
             </Text>
-            <Text style={tailwind('text-black m-2 ')}>
-                <Ionicons name="document-text" size={20} color="black"/> 4.5 
+            <Text style={tailwind('text-white m-2 ')}>
+                <Ionicons name="document-text" size={20} color="grey"/>{props.gpa}
             </Text>
 
         
