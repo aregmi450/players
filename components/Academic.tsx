@@ -19,6 +19,8 @@ const Academic: FC<AcademicDetails> = (props) => {
                 <Ionicons name="school" size={20} color="grey" style={tailwind('p-2')} /> {props.schoolName}
             </Text>
 
+
+            <View style={tailwind('flex-row')} >
             <Text style={tailwind('flex-row m-2 text-white')}> ACT Score </Text>
             <Text style={tailwind('text-white m-2 ')}>
                 <Ionicons name="document-text" size={20} color="grey"/>{props.actScore}
@@ -29,6 +31,9 @@ const Academic: FC<AcademicDetails> = (props) => {
                 <Ionicons name="document-text" size={20} color="grey" />{props.satScore}
             </Text>
 
+            </View>
+
+            <View style={tailwind('flex-row')} >
             <Text style={tailwind('flex-row m-2 text-white')}> GPA </Text>
             <Text style={tailwind('text-white m-2 ')}>
                 <Ionicons name="document-text" size={20} color="grey" style={tailwind('')} />{props.gpa}
@@ -38,7 +43,7 @@ const Academic: FC<AcademicDetails> = (props) => {
             <Text style={tailwind('text-white m-2 ')}>
                 <Ionicons name="school" size={20} color="grey" />{props.gradYear}
             </Text>
-
+            </View>
         
             {/* <Text style={tailwind('p-2 text-black flex-row ')}>J.J Thompson School</Text> */}
         </View>
