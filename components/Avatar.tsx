@@ -8,7 +8,7 @@ type Avatar = {
 
 const Avatar = () => {
     return (
-        <View>
+        <View style={tailwind('items-end')}>
             <Image 
                 style={tailwind('w-20 h-20 mr-2   rounded-full')}
             source={{

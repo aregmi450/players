@@ -1,38 +1,37 @@
 import React, {FC} from "react";
-import { Text, ToastAndroid, View } from "react-native";
+import { Text, View } from "react-native";
 import { Card } from "react-native-elements";
 import tailwind from "tailwind-rn";
 
 
 type Props = {
-    score: number,
-    statFor: string
+    score1: number,
+    score2: number,
+    score3: number
 }
-    
-export const  props : Props[]= [
-    {
-        score: 6,
-        statFor: 'Successful Reports'
-    },
-    {
-        score: 12,
-        statFor: 'Events Played'
-    },
-    {
-        score: 10,
-        statFor: 'Jersey Number'
-    }
-]
 
 
 const Games: FC<Props> = (props) =>   {
 return (
     <View style={tailwind('bg-black px-3 py-3 rounded m-2 ')}>
         <View style={tailwind('flex-row')}>
+
             <Card containerStyle={tailwind('bg-black h-24 w-24')}>
-                <Text style={tailwind('text-red-400 font-bold')}>{props.score}</Text>
-                <Text style={tailwind('text-white')}>{props.statFor}</Text>
+                <Text style={tailwind('text-red-400 text-lg font-bold text-center')}>{props.score1}</Text>
+                <Text style={tailwind('text-white text-base text-sm')}>Succesful Reports </Text>
             </Card>
+
+            <Card 
+            containerStyle={tailwind('bg-black h-24 w-24 ')}>
+            <Text style={tailwind('text-red-400 text-lg font-bold text-center')}>{props.score2}</Text>
+                <Text style={tailwind('text-white text-sm text-center')}>Events Played </Text>
+            </Card>
+
+            <Card containerStyle={tailwind('bg-black h-24 w-24')}>
+            <Text style={tailwind('text-red-400 text-lg font-bold text-center')}>{props.score3}</Text>
+            <Text style={tailwind('text-white text-sm text-center')}>Jersey Number </Text>
+            </Card>
+
         </View>
     </View>
 );

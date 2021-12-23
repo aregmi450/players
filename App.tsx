@@ -19,8 +19,9 @@ export default function App() {
       cellno='+977-9846503254'/>
 
       <Games
-      score= {6}
-      statFor='Succesful Reports'
+      score1={6}
+      score2={19}
+      score3={30}
       />
 
       <View style={tailwind('flex-row items-center pl-5')}>
