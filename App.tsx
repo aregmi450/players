@@ -27,7 +27,13 @@ export default function App() {
         <Text style={tailwind('p-2 text-blue-400 font-bold')}>Athlete Stats</Text>
       </View>
 
-      <Stats />
+      <Stats
+      height={5.11}
+      weight={160}
+      posPrimary='ST'
+      posSecondary='CAM' 
+      />
+      
       <View style={tailwind('flex-row items-center pl-5')}>
       <Ionicons name="newspaper" size={24} color="black" />
       <Text style={tailwind('p-2 text-blue-400 font-bold')}>Athlete Academics</Text>

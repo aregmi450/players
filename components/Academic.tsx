@@ -14,6 +14,7 @@ type AcademicDetails = {
 const Academic: FC<AcademicDetails> = (props) => {
     return (
         <View style={tailwind('bg-black px-3 py-3 rounded m-2')}>
+            
             <Text style={tailwind('flex-row m-2 text-white') }> High School </Text>
             <Text style={tailwind('text-white m-2 ')}>
                 <Ionicons name="school" size={20} color="grey" style={tailwind('p-2')} /> {props.schoolName}

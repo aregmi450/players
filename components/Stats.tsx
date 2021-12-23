@@ -1,26 +1,45 @@
-import React from "react";
+import React , {FC} from "react";
 import {Text, View, StyleSheet} from 'react-native';
 import tailwind from "tailwind-rn";
-import { Ionicons } from '@expo/vector-icons';
-const Stats = () => {
+import { Ionicons, MaterialCommunityIcons } from '@expo/vector-icons';
+
+type Attribute = {
+    height: number,
+    weight: number,
+    posPrimary: string,
+    posSecondary: string
+}
+
+
+const Stats: FC<Attribute> = (props) => {
     return (
-        <View style={tailwind('bg-red-400 content-center m-2 p-2 rounded')}>
+        <View style={tailwind('bg-black content-center m-2 p-2 rounded')}>
             
-            <Text>Height  5' <Ionicons name="person" size={14} color="black" /> 11''</Text>
-            <Text>Weight 170 </Text>
-            <Text>Primary Position ST </Text>
-            <Text>Secondary Position CAM</Text>
+            <View style={tailwind('flex-row')} ></View>
+
+            <View style={tailwind('flex-row')} >
+            <Text style={tailwind('flex-row m-2 text-white')}>Height </Text>
+            <Text style={tailwind(' text-white p-2')}><MaterialCommunityIcons name="human-male-height" size={16} color="grey"/> {props.height} </Text>
+
+            <Text style={tailwind('flex-row m-2 text-white')}>Weight </Text>
+            <Text style={tailwind(' text-white p-2')}><MaterialCommunityIcons name="weight-pound" size={16} color="grey" /> {props.weight} </Text>
+            </View>
+
+            <View style={tailwind('flex-row')} >
+            <Text style={tailwind('flex-row m-2 text-white')}> Primary Position </Text>
+            <Text style={tailwind('text-white m-2 ')}> <MaterialCommunityIcons name="podium-gold" size={16} color="grey"/> {props.posPrimary}
+            </Text>
+
+            <Text style={tailwind('flex-row m-2 text-white')}> Secondary Position </Text>
+            <Text style={tailwind('text-white m-2')}> <MaterialCommunityIcons name="podium-silver" size={16} color="grey" /> {props.posSecondary}
+            </Text>
+            </View>
+            
         </View>
     )
 }
 
 const styles = StyleSheet.create({
-    three: {
-        backgroundColor: "purple",
-        alignContent: "center",
-        marginTop: 15,
-        flex: 1
-    },
 })
 
 export default Stats;
