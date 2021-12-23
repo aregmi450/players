@@ -20,11 +20,12 @@ const Profile: FC<Info> = (props) => {
             <View style={tailwind('bg-black px-3 py-3 rounded m-2')}>
                 <Constant 
                 headline='Details'/>
+                <Avatar />
                 <Text style={tailwind('text-white font-bold')}>{props.name} </Text>
                 <Text style={tailwind('text-white')}>{props.collegeName}</Text>
                 <Text style={tailwind('text-white')}>
                 <Ionicons name="call" size={20} color="red"/>{props.cellno}</Text>
-                <Avatar/>
+               
                 
             </View>
         </View>
