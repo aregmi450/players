@@ -1,12 +1,13 @@
 import { StatusBar } from 'expo-status-bar';
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, View } from 'react-native';
 import tailwind from 'tailwind-rn';
 import { Ionicons } from '@expo/vector-icons';
 import Profile from './components/Profile';
 import Games from './components/Games';
 import Stats from './components/Stats';
 import Academic from './components/Academic';
+import Constant from './components/constants';
 
 
 export default function App() {
@@ -24,7 +25,8 @@ export default function App() {
 
       <View style={tailwind('flex-row items-center pl-5')}>
         <Ionicons name="person" size={24} color="black" />
-        <Text style={tailwind('p-2 text-blue-400 font-bold')}>Athlete Stats</Text>
+        <Constant
+        headline='Stats'/>
       </View>
 
       <Stats
@@ -33,10 +35,11 @@ export default function App() {
       posPrimary='ST'
       posSecondary='CAM' 
       />
-      
+
       <View style={tailwind('flex-row items-center pl-5')}>
       <Ionicons name="newspaper" size={24} color="black" />
-      <Text style={tailwind('p-2 text-blue-400 font-bold')}>Athlete Academics</Text>
+      <Constant 
+      headline='Academics'/>
       </View>
       <Academic
       schoolName='Ullens School'
@@ -54,7 +57,7 @@ export default function App() {
 
 const styles = StyleSheet.create({
   container: {
-    backgroundColor: 'white',
+    backgroundColor: 'rgb(71,85,105)',
     justifyContent: 'center',
     flex: 1,
     marginTop: 35
