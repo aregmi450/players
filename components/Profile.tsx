@@ -1,4 +1,3 @@
-import { StatusBar } from 'expo-status-bar';
 import React, {FC} from 'react';
 import {Text, View } from 'react-native';
 import tailwind from 'tailwind-rn';
@@ -24,7 +23,7 @@ const Profile: FC<Info> = (props) => {
                 <Text style={tailwind('text-white font-bold')}>{props.name} </Text>
                 <Text style={tailwind('text-white')}>{props.collegeName}</Text>
                 <Text style={tailwind('text-white')}>
-                <Ionicons name="call" size={20} color="red" />{props.cellno}</Text>
+                <Ionicons name="call" size={20} color="red"/>{props.cellno}</Text>
                 <Avatar/>
                 
             </View>

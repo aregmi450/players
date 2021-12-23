@@ -27,11 +27,13 @@ const Stats: FC<Attribute> = (props) => {
 
             <View style={tailwind('flex-row')} >
             <Text style={tailwind('flex-row m-2 text-white')}> Primary Position </Text>
-            <Text style={tailwind('text-white m-2 ')}> <MaterialCommunityIcons name="podium-gold" size={16} color="grey"/> {props.posPrimary}
+            <Text style={tailwind('text-white m-2')}> <MaterialCommunityIcons name="podium-gold" size={16} color="grey"/> 
+            {props.posPrimary}
             </Text>
 
             <Text style={tailwind('flex-row m-2 text-white')}> Secondary Position </Text>
-            <Text style={tailwind('text-white m-2')}> <MaterialCommunityIcons name="podium-silver" size={16} color="grey" /> {props.posSecondary}
+            <Text style={tailwind('text-white m-2')}> <MaterialCommunityIcons name="podium-silver" size={16} color="grey" />
+             {props.posSecondary}
             </Text>
             </View>
             
