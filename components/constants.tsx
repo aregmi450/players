@@ -6,10 +6,10 @@ import tailwind from 'tailwind-rn';
 type Topic = {
     headline: string,
 }
-const Constant: FC<Topic> = (props) => {
+const Constant: FC<Topic> = ({headline}) => {
     return (
         <View> 
-            <Text style={tailwind('p-2 text-white font-bold')}> Athlete {props.headline}</Text>
+            <Text style={tailwind('p-2 text-white font-bold')}> Athlete {headline}</Text>
         </View>
     )
 } 

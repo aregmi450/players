@@ -11,24 +11,24 @@ type AcademicDetails = {
     gradYear: number
 }
 
-const Academic: FC<AcademicDetails> = (props) => 
+const Academic: FC<AcademicDetails> = ({schoolName, actScore, satScore, gpa, gradYear}) => 
         <View style={tailwind('bg-black px-3 py-3 rounded m-2')}>
             
             <Text style={tailwind('flex-row m-2 text-white') }> High School </Text>
             <Text style={tailwind('text-white m-2')}>
-                <Ionicons name="school" size={20} color="grey" style={tailwind('p-2')} /> {props.schoolName}
+                <Ionicons name="school" size={20} color="grey" style={tailwind('p-2')} /> {schoolName}
             </Text>
 
 
             <View style={tailwind('flex-row')} >
             <Text style={tailwind('flex-row m-2 text-white')}> ACT Score </Text>
             <Text style={tailwind('text-white m-2 ')}>
-                <Ionicons name="document-text" size={20} color="grey"/>{props.actScore}
+                <Ionicons name="document-text" size={20} color="grey"/>{actScore}
             </Text>
 
             <Text style={tailwind('flex-row m-2 text-white')}> SAT Score </Text>
             <Text style={tailwind('text-white m-2 ')}>
-                <Ionicons name="document-text" size={20} color="grey" />{props.satScore}
+                <Ionicons name="document-text" size={20} color="grey" />{satScore}
             </Text>
 
             </View>
@@ -36,16 +36,15 @@ const Academic: FC<AcademicDetails> = (props) =>
             <View style={tailwind('flex-row')} >
             <Text style={tailwind('flex-row m-2 text-white')}> GPA </Text>
             <Text style={tailwind('text-white m-2 ')}>
-                <Ionicons name="document-text" size={20} color="grey" style={tailwind('')} />{props.gpa}
+                <Ionicons name="document-text" size={20} color="grey" style={tailwind('')} />{gpa}
             </Text>
 
             <Text style={tailwind('flex-row m-2 text-white')}> Graduation Year </Text>
             <Text style={tailwind('text-white m-2 ')}>
-                <Ionicons name="school" size={20} color="grey" />{props.gradYear}
+                <Ionicons name="school" size={20} color="grey" />{gradYear}
             </Text>
             </View>
         
-            {/* <Text style={tailwind('p-2 text-black flex-row ')}>J.J Thompson School</Text> */}
         </View>
 
 export default Academic; 

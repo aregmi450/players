@@ -12,7 +12,7 @@ type Info = {
 
 }
 
-const Profile: FC<Info> = (props) => {
+const Profile: FC<Info> = ({name, collegeName, cellno}) => {
     return (
         <View style={tailwind('')}>
             <Constant 
@@ -21,10 +21,10 @@ const Profile: FC<Info> = (props) => {
                 <Constant 
                 headline='Details'/>
                 <Avatar />
-                <Text style={tailwind('text-white font-bold')}>{props.name} </Text>
-                <Text style={tailwind('text-white')}>{props.collegeName}</Text>
+                <Text style={tailwind('text-white font-bold')}>{name} </Text>
+                <Text style={tailwind('text-white')}>{collegeName}</Text>
                 <Text style={tailwind('text-white')}>
-                <Ionicons name="call" size={20} color="red"/>{props.cellno}</Text>
+                <Ionicons name="call" size={20} color="red"/>{cellno}</Text>
                
                 
             </View>

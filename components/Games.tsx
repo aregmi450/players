@@ -11,14 +11,14 @@ type Props = {
 }
 
 
-const Games: FC<Props> = (props) =>   {
+const Games: FC<Props> = ({score1, score2, score3}) =>   {
 return (
     <View style={tailwind('bg-black px-3 py-3 rounded m-2 ')}>
         <View style={tailwind('flex-row')}>
 
             <Card containerStyle={tailwind('bg-black h-24 w-24')}>
                 <Text style={tailwind('text-red-400 text-lg font-bold text-center')}>
-                    {props.score1}
+                    {score1}
                     </Text>
                 <Text style={tailwind('text-white text-base text-sm')}>
                     Succesful Reports 
@@ -29,7 +29,7 @@ return (
             containerStyle={tailwind('bg-black h-24 w-24 ')}>
             <Text 
             style={tailwind('text-red-400 text-lg font-bold text-center')}>
-                {props.score2}
+                {score2}
                 </Text>
                 <Text 
                 style={tailwind('text-white text-sm text-center')}>
@@ -39,7 +39,7 @@ return (
 
             <Card containerStyle={tailwind('bg-black h-24 w-24')}>
             <Text style={tailwind('text-red-400 text-lg font-bold text-center')}>
-                {props.score3}</Text>
+                {score3}</Text>
             <Text style={tailwind('text-white text-sm text-center')}>
                 Jersey Number </Text>
             </Card>
