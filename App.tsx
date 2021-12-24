@@ -25,20 +25,17 @@ import AthleteProfile from './screens/AthleteProfileScreen';
 import AthleteList from './screens/AthleteListScreen';
 
 
+
 const navigator = createStackNavigator({
   AthleteProfile: AthleteProfile,
   AthleteList: AthleteList,
-}, {
+},
+{
   initialRouteName: 'AthleteList',
   defaultNavigationOptions: {
-    title: "Athlete List",
+    title: "Athlete List"
   }
 });
 
-const App = createAppContainer(navigator);
 
-export default () => {
-  return (
-    <AthleteList />
-  )
-};
+export default createAppContainer(navigator);
