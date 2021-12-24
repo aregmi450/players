@@ -47,4 +47,5 @@ const Academic: FC<AcademicDetails> = (props) =>
         
             {/* <Text style={tailwind('p-2 text-black flex-row ')}>J.J Thompson School</Text> */}
         </View>
+
 export default Academic; 
