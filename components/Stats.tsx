@@ -1,7 +1,7 @@
 import React , {FC} from "react";
-import {Text, View, StyleSheet} from 'react-native';
+import {Text, View} from 'react-native';
 import tailwind from "tailwind-rn";
-import { Ionicons, MaterialCommunityIcons } from '@expo/vector-icons';
+import {MaterialCommunityIcons } from '@expo/vector-icons';
 
 type Attribute = {
     height: number,
@@ -41,7 +41,5 @@ const Stats: FC<Attribute> = ({height, weight, posPrimary, posSecondary}) => {
     )
 }
 
-const styles = StyleSheet.create({
-})
 
 export default Stats;
