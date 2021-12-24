@@ -27,8 +27,8 @@ import AthleteList from './screens/AthleteListScreen';
 
 
 const navigator = createStackNavigator({
-  AthleteProfile: AthleteProfile,
-  AthleteList: AthleteList,
+  AthleteProfile,
+  AthleteList,
 },
 {
   initialRouteName: 'AthleteList',

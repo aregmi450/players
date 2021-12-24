@@ -8,7 +8,8 @@ const  AthleteList = () =>
     <FlatList
         data={[
             {key: 'Lionel Messi'},
-            {key: 'Cristiano Ronaldo'}
+            {key: 'Cristiano Ronaldo'},
+            {key: 'Kylian Mbappe'}
         ]}
         renderItem={({item}) => 
         <Text style={tailwind('p-2 text-xl h-20 mt-2')}>
