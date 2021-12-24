@@ -11,8 +11,7 @@ type AcademicDetails = {
     gradYear: number
 }
 
-const Academic: FC<AcademicDetails> = (props) => {
-    return (
+const Academic: FC<AcademicDetails> = (props) => 
         <View style={tailwind('bg-black px-3 py-3 rounded m-2')}>
             
             <Text style={tailwind('flex-row m-2 text-white') }> High School </Text>
@@ -48,7 +47,4 @@ const Academic: FC<AcademicDetails> = (props) => {
         
             {/* <Text style={tailwind('p-2 text-black flex-row ')}>J.J Thompson School</Text> */}
         </View>
-    )
-}
-
 export default Academic; 
