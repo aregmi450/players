@@ -1,12 +1,11 @@
 
 import { StatusBar } from 'expo-status-bar';
 import React from 'react';
-import AthleteProfile from './screens/AthleteProfileScreen';
-import AthleteList from './screens/AthleteListScreen';
 import {createStackNavigator} from 'react-navigation-stack';
 import { createAppContainer } from "react-navigation";
-
-
+import { NavigationContainer } from '@react-navigation/native';
+import AthleteProfile from './screens/AthleteProfileScreen';
+import AthleteList from './screens/AthleteListScreen';
 
 
 const navigator = createStackNavigator({
