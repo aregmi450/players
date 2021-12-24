@@ -1,9 +1,6 @@
-import { NavigationContainer } from "@react-navigation/native";
 import React from "react";
 import {Text,View, FlatList} from "react-native";
 import tailwind from "tailwind-rn";
-
-
 
 const  AthleteList = () => 
     <View style={tailwind('flex-1 pt-10 py-10')}>
