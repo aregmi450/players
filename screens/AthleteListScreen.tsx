@@ -25,8 +25,6 @@ const navigation = useNavigation();
                     return (
                         <TouchableOpacity
                         onPress={() => navigation.navigate('AthleteProfile', {id: item.name})}>
-                            {/* // onPress={() => console.log('Hello World')}> */}
-                            {/* // onPress={() => navigation.navigateAthleteProfile', { id: ('item.key })}> */}
                             <Text style={tailwind('p-2 text-xl h-20 mt-2 text-green-600')}>
                                 {item.name}
                             </Text>
