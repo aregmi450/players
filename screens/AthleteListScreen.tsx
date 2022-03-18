@@ -4,9 +4,9 @@ import { TouchableOpacity } from "react-native-gesture-handler";
 import tailwind from "tailwind-rn";
 import { useNavigation } from "@react-navigation/native";
 
-type Player = {
-    name: string
-}
+// type Player = {
+//     name: string
+// }
 
 const  AthleteList = () => {
 const navigation = useNavigation();
@@ -18,7 +18,7 @@ const navigation = useNavigation();
                 showsHorizontalScrollIndicator={false}
                 data={[
                     {
-                        name: 'MESSI'
+                        name: 'MESSI',
                     }
                 ]}
                 renderItem={({ item }) => {

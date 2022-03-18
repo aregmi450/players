@@ -26,7 +26,6 @@ const Profile: FC<Info> = ({name, collegeName, cellno}) => {
                 <Text style={tailwind('text-white')}>
                 <Ionicons name="call" size={20} color="red"/>{cellno}</Text>
                
-                
             </View>
         </View>
 
